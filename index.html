@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Ribeye+Marrow" rel="stylesheet">
 </head>
 <body>
+    <script src="script.js"></script>
     <header>
         <nav>
             <div>Timeless TasteTea</div>
@@ -19,79 +20,121 @@
                 <li>Contact Us</li>
             </ul>
         </nav>
+        <section class="warning">
+            Warning: Fictional Company For Portfolio Purposes Only 
+        </section>
         <section class="hero-wrapper">
             <div class="hero">
                 <div class="hero-text">
                     <h1>Revel in a Silent Symphony</h1>
                     <p>Indulge your senses in the world of infusions, where every sip is a journey into tranquility.</p>
-                    <div class="cta-btn">Expore Tea Collection</div>
+                    <div class="cta-btn">Explore Tea Collection</div>
                 </div>
                 <img src="hero-img.jpg">
             </div>
         </section>
-    </header>
-        <section>
+    </header>   
+        <section class="box">
             <div class="box-top">
                 <h2>Why Timeless TasteTea?</h2>
-                <div>TIMELESS TASTETEA</div>
+                <div class="watermark">TIMELESS TASTETEA</div>
+                <div class="teabags-container">
+                    <div class="teabag-container">
+                        <div id="tea0" onmouseenter="moveUp(0)" onmouseleave="moveDown(0)"><img src="teabag.svg"></div>
+                        <img id="str0" src="teabag-string.svg">
+                        <div class="teabag-txt" id="teabag-txt0">Handcrafted with precision to deliver a taste that transcends the ordinary.</div>
+                    </div>
+
+                    <div class="teabag-container">
+                        <div id="tea1" onmouseenter="moveUp(1)" onmouseleave="moveDown(1)"><img src="teabag.svg" ></div>
+                        <img id="str1" src="teabag-string.svg">
+                        <div class="teabag-txt" id="teabag-txt1">We source the finest tea leaves, herbs, and botanicals for a truly exceptional brew.</div>
+                    </div>
+
+                    <div class="teabag-container">
+                        <div id="tea2" onmouseenter="moveUp(2)" onmouseleave="moveDown(2)"><img src="teabag.svg" ></div>
+                        <img id="str2" src="teabag-string.svg">
+                        <div class="teabag-txt" id="teabag-txt2">Committed to eco-friendly packaging and sustainable sourcing practices.</div>
+                    </div>
+                </div>
             </div>
             <div class="box-bot"></div>
         </section>
         <section class="customers">
-            <h2>What Our Customers Have to Say</h2>
-            <div>
-                <figure>
-                    <img src="person1.jpg">
-                    <figcaption>John Doe</figcaption>
-                </figure>
-                <div>
-                    "Timeless TasteTea has become a daily ritual for me. The flavors are exquisite, and each sip is a moment of tranquility."
+            <div class="customers-wrapper">
+                <h2>What Our Customers Have to Say</h2>
+                <div class="fig-left">
+                    <figure>
+                        <div class="customer-img-container"><img class="customer-img" src="person1.jpg"></div>
+                        <figcaption>John Doe</figcaption>
+                    </figure>
+                    <div class="fig-content">
+                        "Timeless TasteTea has become a daily ritual for me. The flavors are exquisite, and each sip is a moment of tranquility."
+                    </div>
                 </div>
-            </div>
-            <div>
-                <figure>
-                    <img src="person2.jpg">
-                    <figcaption>Jane Doe</figcaption>
-                </figure>
-                <div>
-                    "Timeless TasteTeas never fail to impress. The variety of flavors and the quality of ingredients make each tea unique and delightful. I've found my go-to place for premium teas!"
+                <div class="fig-right">
+                    <figure>
+                        <div class="customer-img-container"><img class="customer-img" src="person2.jpg"></div>
+                        <figcaption>Jane Doe</figcaption>
+                    </figure>
+                    <div class="fig-content">
+                        "Timeless TasteTeas never fail to impress. The variety of flavors and the quality of ingredients make each tea unique and delightful. I've found my go-to place for premium teas!"
+                    </div>
                 </div>
-            </div>
-            <div>
-                <figure>
-                    <img src="person3.jpg">
-                    <figcaption>Joe Doe</figcaption>
-                </figure>
-                <div>
-                    "Timeless TasteTea is more than just a tea shop; it's a sanctuary of flavors. The attention to detail in every blend and the soothing atmosphere make it my favorite tea destination."
+                <div class="fig-left">
+                    <figure>
+                        <div class="customer-img-container"><img class="customer-img" src="person3.jpg"></div>
+                        <figcaption>Joe Doe</figcaption>
+                    </figure>
+                    <div class="fig-content">
+                        "Timeless TasteTea is more than just a tea shop; it's a sanctuary of flavors. The attention to detail in every blend and the soothing atmosphere make it my favorite tea destination."
+                    </div>
                 </div>
             </div>
         </section>
         <section>
             <h2>Our Most Popular Blends</h2>
-            <figure>
-                <img>
-                <figcaption></figcaption>
-            </figure>
-            <figure>
-                <img>
-                <figcaption></figcaption>
-            </figure>
-            <figure>
-                <img>
-                <figcaption></figcaption>
-            </figure>
+            <div class="horizontal-scroll-container">
+                <div class="horizontal-scroller">
+                    <figure>
+                        <img src="oolong-tea.jpg">
+                        <figcaption>Oolong Tea</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="earlgray-tea.jpg">
+                        <figcaption>Earl Grey Tea</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="puer-tea.jpg">
+                        <figcaption> Pu Erh Tea</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="oolong-tea.jpg">
+                        <figcaption></figcaption>
+                    </figure>
+                    <figure>
+                        <img src="earlgray-tea.jpg">
+                        <figcaption></figcaption>
+                    </figure>
+                    <figure>
+                        <img src="puer-tea.jpg">
+                        <figcaption> Pu Erh Tea</figcaption>
+                    </figure>
+                </div>
+            </div>
         </section>
+        
         <footer>
             <div>
-                <div>Timeless TasteTea</div>
+                <div class="address-name">Timeless TasteTea</div>
                 <div>Since 1986</div>
+                <br/>
                 <div>123 MyAddress Ave </div>
                 <div>New York, New York 12345</div>
             </div>
-            <div>
+            <div class="follow-us">
                 <div>Follow Us</div>
-                <div>
+                <div class="follow-us-imgs">
                     <img src="facebook.png">
                     <img src="instagram.png">
                     <img src="twitter.png">
