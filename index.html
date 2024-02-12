@@ -11,15 +11,30 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div>Timeless TasteTea</div>
-            <ul>
-                <li>Tea Collection</li>
-                <li>About Us</li>
-                <li>Contact Us</li>
-            </ul>
-            <img class="hamburger-menu" src="hamburger-menu.svg">
-        </nav>
+        <div class="nav-bar-container">
+            <div class="title">Timeless TasteTea</div>
+            <nav class="big-nav">
+                <ul>
+                    <li onclick="scrollDownTo('horizontal-scroller')">Tea Collection</li>
+                    <li onclick="scrollDownTo('box')">About Us</li>
+                    <li onclick="scrollDownTo('contact-us')">Contact Us</li>
+                </ul>
+            <!-- <img class="hamburger-menu" src="hamburger-menu.svg"> -->
+                
+            </nav>
+            <button class="hamburger-menu">
+                <div class="hamburger"></div>
+                <nav class="small-screen-nav active">
+                    <ul>
+                        <li onclick="scrollDownTo('horizontal-scroller')">Tea Collection</li>
+                        <li onclick="scrollDownTo('box')">About Us</li>
+                        <li onclick="scrollDownTo('contact-us')">Contact Us</li>
+                    </ul>
+                </nav>
+            </button>
+        </div>
+        
+        
         <section class="warning">
             Warning: Fictional Company For Portfolio Purposes Only 
         </section>
@@ -35,7 +50,7 @@
             </div>
         </section>
     </header>   
-        <section class="box">
+        <section class="box" id="box">
             <div class="box-top">
                 <h2>Why Timeless TasteTea?</h2>
                 <div class="watermark">TIMELESS TASTETEA</div>
@@ -43,19 +58,19 @@
                     <div class="teabag-container">
                         <div id="tea0"><img src="teabag.svg"></div>
                         <img id="str0" src="teabag-string.svg">
-                        <div class="teabag-txt" id="teabag-txt0">Handcrafted with precision to deliver a taste that transcends the ordinary.</div>
+                        <div class="teabag-txt" id="teabag-txt0"><b>Artisanal Blend</b><br/><br/>Handcrafted with precision to deliver a taste that transcends the ordinary.</div>
                     </div>
 
                     <div class="teabag-container">
                         <div id="tea1"><img src="teabag.svg" ></div>
                         <img id="str1" src="teabag-string.svg">
-                        <div class="teabag-txt" id="teabag-txt1">We source the finest tea leaves, herbs, and botanicals for a truly exceptional brew.</div>
+                        <div class="teabag-txt" id="teabag-txt1"><b>Quality Ingredients</b><br/><br/>We source the finest tea leaves, herbs, and botanicals for a truly exceptional brew.</div>
                     </div>
 
                     <div class="teabag-container">
                         <div id="tea2"><img src="teabag.svg" ></div>
                         <img id="str2" src="teabag-string.svg">
-                        <div class="teabag-txt" id="teabag-txt2">Committed to eco-friendly packaging and sustainable sourcing practices.</div>
+                        <div class="teabag-txt" id="teabag-txt2"><b>Sustainable Practices</b><br/><br/>Committed to eco-friendly packaging and sustainable sourcing practices.</div>
                     </div>
                 </div>
             </div>
@@ -96,7 +111,7 @@
         <section>
             <h2>Our Most Popular Blends</h2>
             <div class="horizontal-scroll-container">
-                <div class="horizontal-scroller">
+                <div id="horizontal-scroller" class="horizontal-scroller">
                     <figure>
                         <img src="oolong-tea.jpg">
                         <figcaption>Oolong Tea</figcaption>
@@ -107,26 +122,26 @@
                     </figure>
                     <figure>
                         <img src="puer-tea.jpg">
-                        <figcaption> Pu Erh Tea</figcaption>
+                        <figcaption>Pu Erh Tea</figcaption>
                     </figure>
                     <figure>
                         <img src="oolong-tea.jpg">
-                        <figcaption></figcaption>
+                        <figcaption>Oolong Tea</figcaption>
                     </figure>
                     <figure>
                         <img src="earlgray-tea.jpg">
-                        <figcaption></figcaption>
+                        <figcaption>Earl Grey Tea</figcaption>
                     </figure>
                     <figure>
                         <img src="puer-tea.jpg">
-                        <figcaption> Pu Erh Tea</figcaption>
+                        <figcaption>Pu Erh Tea</figcaption>
                     </figure>
                 </div>
             </div>
         </section>
         
         <footer>
-            <div>
+            <div id="contact-us">
                 <div class="address-name">Timeless TasteTea</div>
                 <div>Since 1986</div>
                 <br/>
@@ -142,7 +157,6 @@
                 </div>
             </div>
         </footer>
-    
-    
 </body>
+<script src="script.js"></script>
 </html>

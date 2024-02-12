@@ -21,26 +21,79 @@ body{
     overflow-x: hidden;
 }
 
-nav {
+.nav-bar-container {
     display: flex;
-    justify-content: space-between;
     max-width: 1200px;
     height: 40px;
+    justify-content: space-between;
     margin: 0 auto;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    align-items: center;
 }
-
-nav div {
-    font-size: 2.4rem;
+.title {
+    font-size: 3rem;
 }
 
 .hamburger-menu {
-    max-height: 4rem;
+    /* max-height: 4rem; */
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    /* background-color: black; */
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    /* display: none; */
 }
 
-ul {
+.hamburger-menu .hamburger, .hamburger-menu::before, .hamburger-menu::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0px;
+}
+
+.small-screen-nav {
+    /* max-width: 1200px; */
+    direction: rtl;
+    position: relative;
+    /* z-index: 10; */
+    display: none;
+}
+
+.small-screen-nav.active {
+    display: block;
+    /* position: relative; */
+    
+}
+
+.small-screen-nav ul {
+    list-style: none;
+    position: absolute;
+    background-color: #826754;
+    color: white;
+    z-index: 10;
+    text-align: center;
+    margin-top: 0.9rem;
+    width: 100vw;
+}
+
+.small-screen-nav ul li {
+    padding: 3rem;
+    margin: 0rem 0rem;
+    background-color: #826754;
+    color: #ffffff;
+}
+
+.small-screen-nav ul li:hover{
+    background-color: #463506;
+    /* text-decoration: underline; */
+}
+
+.big-nav ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -121,11 +174,11 @@ h1 {
 .box-top h2 {
     font-size: 3.6rem;
     text-align: center;
-    padding-top: 2vw;
+    padding-top: 4rem;
 }
 
 #tea0:hover, #tea1:hover, #tea2:hover, #tea0:hover+#str0, #tea1:hover+#str1, #tea2:hover+#str2, #tea0:hover~#teabag-txt0, #tea1:hover~#teabag-txt1, #tea2:hover~#teabag-txt2 {
-    transform: translateY(-225px);
+    transform: translateY(-28rem);
 }
 
 #str0, #str1, #str2, #teabag-txt0, #teabag-txt1, #teabag-txt2  {
@@ -133,7 +186,7 @@ h1 {
 }
 
 .teabags-container {
-    display: inline-flex;
+    display: flex;
     flex: 1;
     justify-content: space-between;
     margin-top: 16rem;
@@ -185,7 +238,7 @@ h1 {
     display: inline-block;
     background-color: var(--box-color);
     width: 100%;
-    height: 40em;
+    height: 38em;
     position: absolute;
     bottom: 0;
     z-index: 2;
@@ -194,6 +247,8 @@ h1 {
 .customers {
     background-color: #ACBEA3;
     z-index: 7;
+    padding-bottom: 1rem;
+    /* padding-top: 1rem */
 }
 
 .customers-wrapper {
@@ -204,6 +259,8 @@ h1 {
 h2 {
     text-align: center;
     font-size: 4rem;
+    padding-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 figure {
@@ -221,6 +278,8 @@ figcaption {
     align-items: center;
     justify-content: center;
     border-radius: 2rem;
+    background-color: rgb(228, 228, 228);
+    
     margin: 2rem;
 }
 
@@ -230,7 +289,6 @@ figcaption {
     text-align: left;
     align-items: center;
     justify-content: center;
-    background-color: rgb(228, 228, 228);
     border-radius: 2rem;
     margin: 2rem;
 }
@@ -358,6 +416,9 @@ footer > div > div {
     .teabag-container > div > img {
         max-width: 30rem;
     }
+    .watermark {
+        font-size: 7rem;
+    }
 }
 @media (min-width: 768px) and (max-width: 992px) {
     .hero img {
@@ -369,6 +430,9 @@ footer > div > div {
     }
     html {
         font-size: 7px;
+    }
+    .watermark {
+        font-size: 6rem;
     }
 }
 
@@ -382,24 +446,91 @@ footer > div > div {
     html {
         font-size: 6px;
     }
-    nav ul{
+    .big-nav ul{
         display: none;
     }
-    /* .hero img {
-        max-height: 280px;
-    }
-    .cta-btn {
-        max-width: 22rem;
-        padding: 6px;
-        margin-top: 4rem;
-    }*/
+   .watermark {
+    font-size: 5rem;
+   }
     .teabags-container {
         gap: 2rem;
     }
 }
 
-@media (max-width: 520px) {
-    /* html {
-        font-size: 2px;
-    } */
+@media (max-width: 716px) {
+    html {
+        font-size: 9px;
+    }
+
+    .hero h1 {
+        text-align: center;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-text  > p, .cta-btn{
+        margin: 1rem auto;
+        text-align: center;
+        width: auto;
+    }
+
+    .hero-img-container img {
+        margin: 0;
+        margin-top: 1rem;
+    }
+
+    .teabags-container{
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+
+    .box-top {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    #tea0:hover, #tea1:hover, #tea2:hover, #tea0:hover+#str0, #tea1:hover+#str1, #tea2:hover+#str2, #tea0:hover~#teabag-txt0, #tea1:hover~#teabag-txt1, #tea2:hover~#teabag-txt2 {
+        transform: none;
+    }
+
+    #str0, #str1, #str2, .box-bot {
+        display: none;
+    }
+
+    .teabag-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .teabag-txt {
+        max-width: 18rem;
+        margin-top: 17rem;
+    }
+
+    figure {
+        padding-top: 2rem;
+    }
+
+    figcaption {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+    }
+
+    .fig-content {
+        max-width: 85%;
+        padding-bottom: 3rem;
+    }
+
+    .fig-left, .fig-right {
+        display: block;
+        text-align: center;
+        justify-content: center;
+        direction: ltr;
+    }
+
+    .customer-img-container {
+        margin: 0 auto;
+    }
 }
